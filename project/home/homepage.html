@@ -1,0 +1,468 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <style>
+       body{
+        background: linear-gradient(to bottom, #052d3a, #182537);
+        position: static;
+        max-width: 100%;
+        margin: 0;
+       }
+       .header{
+        
+            background: #171d25;
+            display: flex;
+            height: 132px;
+            padding-top: 1%;
+            padding-left: 10%;
+            position: sticky;
+        }
+        .logo,.links,.last{
+            display: flex;
+            flex-direction: column;
+        }
+        .last{
+            color: white;
+            margin-left:20%;
+            margin-right: auto; 
+        
+        }
+        .down
+        {
+            padding: 50px;
+            padding-left: 70px;
+            margin: 50px;
+            display: flex;
+            max-height: 100% ;
+            height: 600px;
+            
+        }
+        .col{
+            background-image: url(images/gta5.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: row;
+            margin-left: 11%;
+            height: 551px;
+            width: 1100px;
+            border: 3px solid rgb(17, 63, 63);
+            padding-left: 20px;
+            border-radius: 15px;
+            transition: background-image 0.7s ease-in;
+        }
+        .rig{
+            cursor: pointer;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url(images/d1.png);
+            background-color: #1b2838;
+            margin-left: 86%;
+            margin-top: 22%;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+        }
+        .left{
+            cursor: pointer;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url(images/d2.png);
+            background-color: #1b2838;
+            margin-top: 22%;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+        }
+        .headings{
+            display: flex;
+            vertical-align: middle;
+
+        }
+        .content{
+            padding-left: 10px;
+            padding-top: 0px;
+            margin-left: 7%;
+            display: flex;
+            flex-direction: column;
+            height: 550px;
+            width: 250px;
+       
+            border: 3px solid #1b2838;
+            padding-bottom: 0px;
+            border-radius: 3%;
+        }
+        .data{
+            display: flex;
+            flex-direction: row;
+            height: 100px;
+            
+        }
+
+        .search{
+            margin-left: 500px;
+            
+        }
+        
+        
+       
+        ul{
+            padding-left: 110px;
+            display: flex;
+            list-style-type: none;
+        }
+        li{
+            padding-top: 30px;
+            padding-left: 40px;
+            padding-bottom: 40px;
+        }
+        a{
+            margin-top: 5%;
+            color: white;
+            font: 29px Brutal,sans-serif;
+            text-decoration-line:none;
+        }
+        #lo{
+            background-image: url('images/loginlogo.png');
+            background-size: cover;
+            border-radius: 40%;
+            margin-top: 20px;
+            margin-left: 50px;
+            height: 70px;
+            width: 70px;
+            border: 2px solid rgb(33, 35, 43);
+            background-color: rgb(74, 86, 92);
+            cursor: pointer;
+        }
+        #i{
+            background-color: #171d25;
+        }
+        .name1{
+            cursor: pointer;
+            border: 2px  burlywood ;
+            margin-top: 1px;
+            text-align: center;
+            display: flex;
+            height: 110px;
+           
+        }
+        .name1:hover{
+            
+            transform: scale(1.1);
+            background-color: rgb(10, 12, 17);
+        }
+        
+        .logos{
+            margin: 4px;
+            max-height: 100%;
+	        max-width: 100%;
+	        width:100px;
+	        height:100px;
+            background-size: cover;
+	        
+             
+        }
+        .text{
+            margin-top: 20px;
+            margin-left:13px;
+            margin-right: 13px;
+            overscroll-behavior-y: initial;
+        }
+        h2{
+
+            color: whitesmoke;
+        }
+        .secondpart{
+            max-height: 100%;
+            max-width: 75%;
+            margin-left: 275px;
+            margin-top: 10px;
+            margin-right: 10px;
+            display: flex;
+           flex-wrap: wrap;
+        }
+        .submodules{
+            cursor: pointer;
+            display: block;
+            flex: 0 0 calc(18% - 20px); 
+            width: 100%;
+            margin-left: 30px; 
+            margin-right: 10px;
+        }
+        .submodules:not(:last-child) {
+            margin-bottom: 25px; /* Adds gap between rows */
+        }
+       .buy{
+            padding-top: 10px ;
+            padding-left: 15px ;
+            display: flex;
+            flex-direction: column;
+        }
+        .pic{
+            height: 325px;
+            
+        }
+        span{
+            padding-top: 10px;
+        }
+        #basegame{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: large;
+            color: rgb(84, 164, 165);
+        }
+        #gamename{
+            font-family: Arial, Helvetica, sans-serif;
+           
+            font-weight: bold;
+            font-size: x-large;
+            color: silver;
+        }
+        #buy{
+            font: 20px Brutal,sans-serif ;
+            color:white;
+            
+        }
+        .footer{
+            max-width: 100%;
+            max-height: 100%;
+            background-color: aqua;
+        }
+       
+    </style>
+    <script type="text/javascript" src="home.js"></script>
+</head>
+<body >
+      
+    <div class="header">
+        <div class="logo">
+            <img src="images/lll.png" height="100px"  >
+        </div>
+        <div class="links">
+            <ul >
+                <li><a href="#" onclick="change(0,id)" id="store">STORE</a></li>
+                <li><a href="#" onclick="change(1,id)" id="disc">DISCOVER</a></li>
+                <li><a href="#" onclick="change(2,id)" id="about">ABOUT US</a></li>
+                <li><a href="#" onclick="change(3,id)" id="support">SUPPORT</a></li>
+            </ul>
+        </div>
+        <div class="last">
+            <?php
+                // Check if username is set in the session
+                if (isset($_SESSION['username'])) {
+                    $username = $_SESSION['username'];
+                    echo "<p>Welcome, $username!</p>";
+                } else {
+                    echo "<p>Welcome, Guest!</p>"; // Display a default message if username is not set
+                }
+                ?>
+            <button type="button" id="lo">
+            </button>
+            </a>
+            
+        </div>
+    </div>
+    <div    class="down">
+        <div class="col">
+            <div class="left" style="vertical-align: bottom;">
+
+            </div>
+            <div class="rig">
+                
+            </div>
+        </div>
+        <div class="data">
+            <div class="content">
+                <div class="name1" id="gta" onclick="logochange(0)" onmouseover="">
+                    <div class="logos" style="background-image: url(images/gtalogo.png);">
+                        
+                    </div>
+                    <div class="text" id="gta5">
+                        <h2>GTA V</h2>
+                    </div>
+                </div>
+                <div class="name1" id="cyberpunk" onclick="logochange(1)">
+                    <div class="logos" style="background-image: url(images/cyberlogo.jpg);">
+                    </div>
+                    <div class="text">
+                        <h2>Cyberpunk</h2>
+                    </div>
+                    
+                </div>
+                <div class="name1" id="fortnite" onclick="logochange(2)">
+                    <div class="logos" style="background-image: url(images/fortnitelogo.png);"></div>
+                    <div class="text">
+                        <h2>Fortnite</h2>
+                    </div>
+                </div>
+                
+                <div class="name1"  id="miles" onclick="logochange(3)">
+                    <div class="logos" style="background-image: url(images/mileslogo.png);"></div>
+                    <div class="text">
+                        <h2>Milesmorales</h2>
+                    </div>
+                </div>
+                <div class="name1" id="morales" onclick="logochange(4)">
+                    <div class="logos" style="background-image: url(images/rocket.jpg);";"></div>
+                    <div class="text">
+                        <h2>Rocket race</h2>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="secondpart">      
+        <div class="submodules">
+            
+            <div class="pic">
+                <img src="images/rdr2.jpeg" style="height: 100%; width: 100%; object-fit: contain;">
+            </div>
+            <div class="buy">
+                <span id="basegame">BASE GAME</span>
+                <span id="gamename">Red Dead Redemption II</span>
+                <span id="buy">Rs.1299/-</span>
+            </div>
+        </div>
+        <div class="submodules">
+            
+            <div class="pic">
+                <img src="images/fifa,.jpeg" style="height: 100%; width: 100%; object-fit: contain;">
+            </div>
+            <div class="buy">
+                <span id="basegame">BASE GAME</span>
+                <span id="gamename">EA Sports Fifa 14</span><br>
+                <span id="buy">Rs.1299/-</span>
+            </div>
+        </div>
+        <div class="submodules">
+            <div class="pic">
+                <img src="images/cod.jpeg" style="height: 100%; width: 100%; object-fit: contain;">
+            </div>
+            <div class="buy">
+                <span id="basegame">BASE GAME</span>
+                <span id="gamename">Call Of Duty: Modern Warfare</span>
+                <span id="buy">Rs.1299/-</span>
+            </div>
+        </div>
+        <div class="submodules">
+            <div class="pic">
+                <img src="images/minecraft.png" style="height: 100%; width: 100%; object-fit: contain;">
+            </div>
+            <div class="buy">
+                <span id="basegame">BASE GAME</span>
+                <span id="gamename">Minecraft</span><br>
+                <span id="buy">Rs.1299/-</span>
+            </div>
+        </div>
+        <div class="submodules">
+            <div class="pic">
+                <img src="images/assasian.avif" style="height: 100%; width: 100%; object-fit: contain;">
+            </div>
+            <div class="buy">
+                <span id="basegame">BASE GAME</span>
+                <span id="gamename">Assasians Creed</span><br>
+                <span id="buy">Rs.1299/-</span>
+            </div>
+        </div>
+
+        
+        <div class="submodules">
+            
+            <div class="pic">
+                <img src="images/forza.jpeg" style="height: 100%; width: 100%; object-fit: contain;">
+            </div>
+            <div class="buy">
+                <span id="basegame">BASE GAME</span>
+                <span id="gamename">Forza Horizon 5</span>
+                <span id="buy">Rs.3099/-</span>
+            </div>
+        </div>
+        <div class="submodules">
+            
+            <div class="pic">
+                <img src="images/hogwarts.jpeg" style="height: 100%; width: 100%; object-fit: contain;">
+            </div>
+            <div class="buy">
+                <span id="basegame">BASE GAME</span>
+                <span id="gamename">Hogwarts Legacy</span><br>
+                <span id="buy">Rs.1799/-</span>
+            </div>
+        </div>
+        <div class="submodules">
+            <div class="pic">
+                <img src="images/cod.jpeg" style="height: 100%; width: 100%; object-fit: contain;">
+            </div>
+            <div class="buy">
+                <span id="basegame">BASE GAME</span>
+                <span id="gamename">Call Of Duty: Modern Warfare</span>
+                <span id="buy">Rs.1299/-</span>
+            </div>
+        </div>
+        <div class="submodules">
+            <div class="pic">
+                <img src="images/minecraft.png" style="height: 100%; width: 100%; object-fit: contain;">
+            </div>
+            <div class="buy">
+                <span id="basegame">BASE GAME</span>
+                <span id="gamename">Minecraft</span><br>
+                <span id="buy">Rs.1299/-</span>
+            </div>
+        </div>
+        <div class="submodules">
+            <div class="pic">
+                <img src="images/assasian.avif" style="height: 100%; width: 100%; object-fit: contain;">
+            </div>
+            <div class="buy">
+                <span id="basegame">BASE GAME</span>
+                <span id="gamename">Assasians Creed</span><br>
+                <span id="buy">Rs.1299/-</span>
+            </div>
+        </div>    
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col1">
+                    <h3>Download Our App</h3>
+                    <p>Downlaod App for Android and ios Mobile</p>
+                    <div class="app-logo">
+                        <img src="{% static '/images/playstore.png' %}">
+                        <img src="{% static '/images/appstore.png' %}">
+                    </div>
+                </div>
+                <div class="footer-col2">
+                    <img src="{% static '/images/logo.png' %}"
+                    <p>Our Purpose Is To Sustainable Make the Pleasure
+                        and Benifits of Sports Accessible to the Many.
+                    </p>
+                </div>
+                <div class="footer-col3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Cupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li> Refund Policy</li>
+                    </ul>
+                </div>
+                <div class="footer-col4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                        <li>Twitter</li>
+                        <li> Facebook</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">&copyCopyright 2024 - CelestialCart</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<?php
+$host = 'your_host';
+$username = 'your_username';
+$password = 'your_password';
+$database = 'your_database_name';
+
+// Create connection
+$conn = new mysqli($host, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+        .container{
+            max-height: 100%;
+            width:70%;
+            border: 2px solid black;
+            margin: 14%;
+            margin-top: 10%;
+            
+        }
+        .maincon{
+            display: flex;
+        }
+        .container1{
+            border: 2px solid black;
+            margin:3%;
+            width: 60%;
+            height:80%;
+            padding:2%;
+        }
+        .container2{
+            margin-top:3%;
+            margin-right: 1%;
+            padding: 2%;
+            height: 80%;
+            width: 30%;
+            border: 2px solid black;
+        }
+        body{
+        background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <h1><center>Thank you for shopping on Epic-Emporium Game Store</center></h1>
+            <h2><center> Cart Area</center></h2>
+            <div class="maincon">
+                <div class="container1">
+                    <table>
+                        <table>
+                            <tr>
+                                <th>Game Name</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                            <?php
+                                session_start();
+                                include 'db_connection.php';
+
+                                // Retrieve cart items from the database and display them in a table
+                                $sql = "SELECT * FROM game";
+                                $result = $conn->query($sql);
+
+                                if ($result->num_rows > 0) {
+                                    // Output game data
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo "<tr>";
+                                        echo "<td>".$row['serialnum'] "</td>";
+                                        echo "<td>" . $row['gamename'] . "</td>";
+                                        echo "<td>$" . $row['price'] . "</td>";
+                                        echo "</tr>";
+                                    }
+                                } else {
+                                    echo "<tr><td colspan='3'>No games found</td></tr>";
+                                }
+
+                                $conn->close();
+                                ?>
+
+                        </table>
+                    </table>
+                </div>
+                <div class="container2">
+    h1
+                </div>
+            </div>
+            
+    </div>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STORE</title>
+    <style>
+        .head{
+            
+            display: flex;
+            flex-direction: row;
+            background-color: #171d25;
+            max-height: 100%;
+           
+            padding-top: 20px;
+            padding-left: 10%;
+            position: sticky;
+        }
+        h1{
+            font-size: xx-large;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight:900 ;
+            color: azure;
+        }
+        #he{
+            padding-left: 110px;
+            display: flex;
+            list-style-type: none;
+        }
+        #h{
+            padding-top: 30px;
+            padding-left: 40px;
+            padding-bottom: 40px;
+        }
+        a{
+            margin-top: 5%;
+            color: white;
+            font: 29px Brutal,sans-serif;
+            text-decoration-line:none;
+        }
+        body{
+            position: static;
+            max-width: 100%;
+            max-height: 100%;
+            background: linear-gradient(to bottom, #052d3a, #182537);
+            margin: 0;
+        }
+        .bottom{
+            max-height:100%; 
+            max-width: 100%;
+            display: flex;
+            padding: 40px 100px 10px 175px;
+            
+        }
+        .firstpart{
+            
+            max-height: 100%;
+            max-width: 100%;
+            padding: 30px;
+            width:60%;
+            margin-left:5%;
+            color: whitesmoke;
+          
+        }
+        #drop{
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+           
+        }
+        #drop1{
+            padding: 5px 20px   ;
+            font-family: Arial, sans-serif;
+            font-size: 25px;
+            cursor: pointer;
+                       
+        }
+        #drop1::after
+        {
+            content: ''; /* Add an empty content */
+            display: block; /* Make it a block-level element */
+           
+            margin-top: 3px; /* Adjust the space between the text and the underline */
+        }
+        #drop1:hover{
+            border-bottom: 2px solid rgb(255, 255, 255);
+            border-width: 5px;
+        }
+        .display{
+            height: 500px;
+            background-color: #182537;
+            margin-left: 45px;
+        }
+        
+        iframe{
+            width: 100%;
+            height: 100%;
+        }
+        .options{
+            display: flex;
+            flex-direction: row;
+        }
+        #display{
+            height: 300px;
+            width: 700px;
+        }
+        .info{
+            margin:45px;
+        }
+        #genre{
+            margin-left: 60px;
+        }
+        .second{
+            padding: 30px;
+            background-color: #14181f;
+            display: none;
+            margin-left: 60px;
+            width:80%;
+            border-radius: 40px;
+        }
+        .third{
+            margin-top: 10% ;
+            margin-left: 50px;
+            padding-left: 20px;
+            display: none;
+            border-radius: 25px;
+            background-color: #14181f;
+        }
+
+        .first{
+            color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            max-height: 100%;
+            max-width: 100%;
+            padding: 30px;
+            width:90%;
+        }
+        h2{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #drop1{
+            font-size: x-large;
+            font-weight: 700;
+        }
+        .secondpart{
+            
+            margin-left: 3%;
+            max-height: 100%;
+            max-width: 100%;
+            width: 25%;
+        }
+        .image{
+            background-color: #182537;
+            width: 80%;
+            height: 400px;
+            margin-left: 10%;
+            margin-top: 20%;
+            background-image: url('images/gtalogo.jpg');
+            background-size: cover;
+        }
+        .buy,.addcart{
+            background-color: aliceblue;
+            margin-top: 5%;
+            margin-left: 5%;
+            margin-right: 5%;
+            height:70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid whitesmoke;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+        .buy:hover{
+            background-color: #000000;
+            color: aliceblue;
+        }
+        .addcart:hover{
+            background-color: #000000;
+            color: aliceblue;
+        }
+        .price{
+            color: aliceblue;
+            margin-left: 7%;
+            margin-top: 3%;
+        }
+        #Requirements{
+            padding: 5px 20px   ;
+            font-family: Arial, sans-serif;
+            font-size: 25px;
+          
+        }
+
+        footer {
+        background-color: #212529;
+        color: #fff;
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1140px;
+        margin: auto;
+    }
+
+    .footer-section {
+        margin: 0 10px 20px;
+    }
+
+    .footer-section h2 {
+        margin-bottom: 10px;
+    }
+
+    .footer-section a {
+        color: #fff;
+        text-decoration: none;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .footer-section a:hover {
+        color: #dddddd;
+    }
+
+    .copyright {
+        padding-top: 20px;
+        border-top: 1px solid #dddddd;
+    }
+        
+    </style>
+
+    
+    <script src="http://localhost/project/home/home.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="head">
+        <img src="images/lll.png" height="100px">
+        <ul id="he">
+            <li id="h"><a href="http://localhost/project/home/hp.php" onclick="change(0,id)" id="store">STORE</a></li>
+            <li id="h"><a href="http://localhost/project/home/hp.php#" onclick="change(1,id)" id="disc">DISCOVER</a></li>
+            <li id="h"><a href="#footer" onclick="scrollToFooter()" id="about">ABOUT US</a></li>
+            <li id="h"><a href="#footer" onclick="scrollToFooter()" id="support">SUPPORT</a></li>
+        </ul>
+    </div>
+    <div class="bottom">
+        <div class="firstpart">
+            <h1>GTA-V</h1>
+            <br>
+                <ul id="drop">
+                <li  id="drop1" onclick="show(1)">OverView</li>
+                <li  id="drop1" onclick="show(2)">About Game</li>
+                <li  id="drop1" onclick="show(3)">Requirements</li>
+                </ul>
+            <div class="first">
+                <div class="display">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/QkkoHAzjnUs?si=o_ercrIwziCPvoLJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                
+                </div>
+                <div class="info">
+                <span><h2>Genre:</h2></span>
+                <h2 id="genre">Battle-royale, Action , Multiplayer</h2>
+           
+                </div>
+            </div>
+            <div class="second">
+                <h2><span style="line-height: 1.5;">Grand Theft Auto V is an action-packed adventure game set in the fictional city of Los Santos. Players explore the vast open-world environment, taking on the roles of three criminals: Michael, Franklin, and Trevor. With an array of missions, activities, and multiplayer options, GTA 5 offers endless entertainment and excitement.
+                    <br><br>
+                    Key Features:<br>
+                    1.Explore the sprawling city of Los Santos and its surroundings.<br>
+                    2.Play as three distinct characters with their own stories and abilities.<br>
+                    3.Engage in missions, heists, and various activities.<br>
+                    4.Experience the dynamic multiplayer mode, Grand Theft Auto Online.<br>
+                    </span></h2>
+            </div>
+            <div class="third">
+                    <br>
+                    <h2 style="color: whitesmoke; font-size: x-large;">System Requirements</h2>
+                    <ul id="Requirement">
+                        <li id="Requirements"><strong>OS:</strong> Windows 11 (64-bit)</li>
+                        <li id="Requirements"><strong>Processor:</strong> Intel Core i5-9800 or AMD Ryzen 5 3200</li>
+                        <li id="Requirements"><strong>Memory:</strong> 16 GB RAM</li>
+                        <li id="Requirements"><strong>Graphics:</strong> NVIDIA GeForce GTX 2050 6GB or AMD Radeon RX 580 8GB</li>
+                        <li id="Requirements"><strong>DirectX:</strong> Version 12</li>
+                        <li id="Requirements"><strong>Storage:</strong> 150 GB available space</li>
+                        
+                    </ul>
+            </div>
+        </div>
+        <div class="secondpart" >
+            <div class="image">
+                
+            </div>
+            <div class="price">
+                <h2> RS.3999/-</h2>
+            </div>
+            <div class="addcart">
+                <h2 onclick="databaseentry(0)">Add cart</h2>
+            </div>
+            <div class="buy">
+                <h2 >Purchase</h2>
+            </div>  
+        </div>
+        
+    </div>
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2 id="footer1">Contact Us</h2>
+                <p>Have any questions about our games? Feel free to reach out!</p>
+                <a href="mailto:support@epicEmporium.com">support@Epic-Emporium.com</a>
+            </div>
+            <div class="footer-section">
+                <h2 id="footer1">Follow Us</h2>
+                <a href="https://www.instagram.com/manideep_834/?hl=en">Instagram</a>
+                <a href="https://www.linkedin.com/in/mani-deep-82b178258">Linked in</a>
+                <a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a>
+            </div>
+            <div class="footer-section">
+                <h2 id="footer1"><a href="#">About Us</a></h2>
+                <span id="aboutus">Epic Emporium: We Live, Breathe, Game<br></span>
+
+<span id="sub">We're a passionate bunch at Epic Emporium, founded by gamers, for gamers. We offer a huge selection of games, from the hottest releases to hidden treasures, for all platforms. Our friendly experts are here to recommend the perfect game for you, no matter your skill level..</span>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Epic-Emporium Game store. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

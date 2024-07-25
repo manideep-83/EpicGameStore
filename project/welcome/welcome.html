@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .welcome{
+            background-color: rgba(83, 83, 83, 0.2);
+            text-align: center;
+            margin: auto;
+            height: fit-content;
+            width: 30%;
+            padding: 30px 30px 30px 30px;
+            margin-top: 10%;
+            display: block;
+        }
+        img{
+            margin-top: 3%;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            box-shadow: 5px 5px 5px 5px ;
+            
+        }
+        h2{
+            color: white;
+            font-size: larger;
+            font: 18px Brutal,sans-serif;
+        }
+        #pass,#email{
+            font-size: large;
+            color: whitesmoke;
+            background-color: rgba(83, 83, 83, 0.2);
+            border: 2px solid rgb(59, 56, 56);
+            margin: auto;
+            width: 60%;
+            height: 50px;
+            padding-left: 4%;
+            border-radius: 2%;
+        }
+        .form{
+            padding-left:17% ;
+            position: relative;
+        }
+        #button{
+            width: 40%;
+            height: 50px;
+            font-size: larger;
+            background-color:#0074E4;
+            color: white;
+            border-radius: 2%;
+        }
+        
+        .fs,.fs1     {
+        color: red;
+        height: 10px;
+        width: 60%;
+        margin-left:6%;
+        margin-top: 1%;
+        border: 0;
+        display:none;
+        }
+        .fs1{
+            margin-top: -1%;
+            margin-left: 7%;
+        }
+        legend{
+            font-size: large;
+            font: 18px Brutal,sans-serif ;
+        }
+        .second{
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 0;
+        }
+        #l1{
+            font-size: larger;
+            color: aliceblue;
+            font: 18px Brutal,sans-serif ;
+        }
+        #pass{
+            display: none;
+        }
+        .visible{
+            
+           position: absolute;
+            top:  60%;
+            right: 810px;
+            cursor: pointer;
+            font-size: larger;
+            display: flex;
+        }
+        #Epic{
+            height: 140px;
+            width: 60%;
+            font-size: x-large;
+            color: aliceblue;
+            background-image: url('Epic id.jpg');
+            display: inline-block;
+            padding: 10px;
+            background-size: cover; /* Ensures the background image covers the entire button */
+            background-position: center; /* Centers the background image */
+            border: 2px solid aliceblue;
+           
+            cursor: pointer;
+        }
+        
+        .signup{
+            background-color: rgba(255, 255, 255, 0.2);
+            text-align: center;
+            margin: auto;
+            height: fit-content;
+            width: 30%;
+            padding: 30px 30px 30px 30px;
+            margin-top: 15%;
+            color: aliceblue;
+            display: none;
+        }
+    </style>
+    <script type="text/javascript" src="welcom.js"></script>
+</head>
+<body class="bod">
+    <div class="header">
+        hi
+    </div>
+    
+    
+    
+    <div class="welcome">
+        <div class="data">
+            <img src="logo.png">
+            <h2 id="h4">Sign In or Sign Up</h2>
+                <form>
+                    <input type="email" name="email" id="email" required  placeholder="Email Adress" ><br>
+                    <fieldset   class="fs">
+                        <legend>
+                            <span>
+                                Fill the correct email adress
+                            </span>
+                        </legend>
+                    </fieldset>
+                    <br>
+                    <input type="password" id="pass" placeholder="Password"><br>
+                    <span class="visible" onclick="visi()">🙈</span>
+                    <fieldset   class="fs1">
+                        <legend>
+                            <span>
+                                Incorrect password, Try again
+                            </span>
+                        </legend>
+                    </fieldset>
+                    
+                    <br><button type="button" id="button" onclick="f1()">continue</button>
+                </form>
+                <br>
+            <div class="rem">
+                <fieldset class="second">
+                    <legend id="l1"> or continue with </legend>
+                    <br>
+                    <button type="button" id="Epic" onclick="eid()"></button> 
+                    
+                </fieldset>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <div class="signup">
+        <h1>Sign up</h1>
+        <input type=""
+    </div>
+</body>
+</html>
